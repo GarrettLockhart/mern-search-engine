@@ -2,7 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 
+// bring in the method from apollo
 import { useMutation } from '@apollo/client';
+// bring in the mutation as defined in our "mutations" file
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
 
@@ -11,6 +13,7 @@ const LoginForm = () => {
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
 
+  // displays the information that is being typed into the input fields, by grabbing the "name" attribute from the input element, depending on what that input elements name is it will grab its value based on that.
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setUserFormData({ ...userFormData, [name]: value });
@@ -26,6 +29,7 @@ const LoginForm = () => {
     }
   }, [error]);
 
+  // takes the given state that has now been set by the function above and passes that through to our auth file, which will do so by using the token as a mean for authentication.
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
