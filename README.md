@@ -9,7 +9,7 @@
     <img src="./assets/img/logorec.png" alt="Logo" width="80">
   </a>
 
-<h3 align="center">Dev Portfolio</h3>
+<h3 align="center">Mern Book Search Engine</h3>
 
   <p align="center">
     A MERN google book search engine, build using react.
